@@ -52,7 +52,7 @@ let infoUser = () => {
 };
 $PrevBtn.addEventListener("click", infoUser);
 
-//Next 버튼 구현
+//Next 버튼 구현하기
 infoIndex = 0;
 if (infoIndex === 0) {
   infoIndex = users.length;
