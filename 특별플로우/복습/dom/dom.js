@@ -53,9 +53,8 @@ let infoUser = () => {
 $PrevBtn.addEventListener("click", infoUser);
 
 //Next 버튼 구현하기
-infoIndex = 0;
-if (infoIndex === 0) {
-  infoIndex = users.length;
+if (infoIndex >= infoIndex.length - 1) {
+  infoIndex = 0;
 } else {
   infoIndex++;
   $info.innerHTML = `
@@ -64,3 +63,4 @@ if (infoIndex === 0) {
     <div>${users[infoIndex].height}</div>
 `;
 }
+$NextBtn.addEventListener("click", infoUser);
