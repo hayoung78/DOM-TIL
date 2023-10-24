@@ -1,15 +1,15 @@
 const musicListData = [
   {
-    src: './assets/image/iu_0.jpg',
-    color: ['#0272a4', '#f6a564'],
+    src: "./assets/img/",
+    color: ["#0272a4", "#f6a564"],
   },
   {
-    src: './assets/image/iu_1.jpg',
-    color: ['#b6bfc8', '#36595b'],
+    src: "./assets/img/iu_1.jpg",
+    color: ["#b6bfc8", "#36595b"],
   },
   {
-    src: './assets/image/iu_2.jpg',
-    color: ['#e58e82', '#6f569f'],
+    src: "./assets/img/iu_2.jpg",
+    color: ["#e58e82", "#6f569f"],
   },
 ];
 
@@ -41,3 +41,19 @@ const musicListData = [
         (3) start 시에는 disk가 돌아가고 stop 시에는 disk가 멈춰야함
         (4) 선택된 앨범에는 하이라이트 호과가 있어야하며 클릭 및 버튼을 통해 선택이 가능함
 */
+let imgIndex = 0;
+let imgArr = [];
+const $prevBtn = document.querySelector("#prev-btn");
+const $nextBtn = document.querySelector("#next-btn");
+
+const $moveImg = document.querySelector("#move-img");
+const $img = document.querySelector("#move-img > img");
+
+for (let i = 0; i < musicListData.length; i++) {
+  $moveImg.innerHTML += `<img src=${musicListData[i].src} />`;
+}
+
+imgArr.push(musicListData[imgIndex].src);
+console.log(imgArr);
+
+$nextBtn.addEventListener("click", () => {});
